@@ -1,0 +1,103 @@
+body {
+font-family: sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;   
+background-attachment: fixed;
+background-image: url("./image/christmas-tree-2928142_1280.jpg");
+}
+
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    -webkit-box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 10%;
+   }
+   
+   button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    -webkit-filter: blur(2em);
+            filter: blur(2em);
+    opacity: .7;
+    -webkit-transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+            transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    -webkit-box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+            box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+     
+    -webkit-box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+            box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+          
+           
+   }
+/* ===================Модальное окно */
+
+.modal {
+  
+  z-index: 1000; 
+  background: rgba(122, 119, 119, 0.9);
+  display: flex;
+  justify-content: right;
+  align-content: flex-start;
+  /* overflow: hidden; */
+  margin-top: 2rem;
+  padding: 15px 15px; 
+  width: 640px;
+  height: 384px;
+  border-radius: 5px;
+  background-size: cover; 
+  background-image: url("./image/presents-g358836c77_640.jpg");
+  border-width: 3px;
+  border-style: solid;
+  border-image:  linear-gradient(to bottom,red,rgba(0, 0, 0, 0)) 1 100%;
+   
+    
+}
+#windowModal {
+color: blueviolet;   
+font-size: 18px;
+}
